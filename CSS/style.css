@@ -1,0 +1,295 @@
+@import url('https://fonts.googleapis.com/css2?family=Baumans&family=Jost:wght@100;200;300;400;500;600;700;800;900&family=Poppins:wght@100;200;300;400;500;600;700;800;900&family=Rubik+Doodle+Shadow&display=swap');
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    font-family: 'Poppins';
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+:root {
+    --midnight-blue: #342F76ff;
+    --black: #000002ff;
+    --r-violet: #1F002Dff;
+    --black-2: #06000Aff;
+    --dark-violet: #9102C0ff;
+    --white: #ffff;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+p {
+    font-size: 1.6rem;
+}
+
+#hero {
+    height: 100vh;
+    background-image: url(../images/hero.jpg);
+    background-size: cover;
+    background-position: center;
+    padding-top: 8rem;
+    position: relative;
+    z-index: 2;
+}
+#hero::after{
+    left: 0;
+    top: 0;
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #0000006f;
+    z-index: -1;
+}
+
+
+/* Navbar */
+
+#navbar {
+    width: 100%;
+    height: 8rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 3.5vw;
+    border-bottom: 1px solid #ffffff33;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: transparent;
+    transition: 1s cubic-bezier(0.25, 1, 0.5, 1);
+    background-color: var(--white);
+}
+
+.sticky #navbar {
+    background-color: var(--dark-violet);
+}
+
+
+.nav-logo a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.nav-logo span {
+    font-family: 'Baumans';
+    font-size: 3rem;
+    color: var(--black);
+}
+
+.nav-logo img {
+    width: 55px;
+    border: 1px solid var(--midnight-blue);
+    border-radius: 50%;
+}
+
+.sticky .nav-logo span {
+    color: var(--white);
+}
+
+.sticky .nav-logo img {
+    width: 55px;
+    border: none;
+    background-color: var(--white);
+    border-radius: 50%;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 3vw;
+}
+
+nav ul li a {
+    font-size: 2rem;
+    color: var(--black);
+}
+
+.sticky nav ul li a{
+    color: var(--white);
+}
+
+.nav-btn {
+    text-transform: uppercase;
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(50, 50, 50, 0.106);
+    border-radius: 1rem;
+    padding: .5rem 1rem;
+    position: relative;
+    transition: all .3s ease;
+    z-index: 2;
+}
+
+.nav-btn:hover {
+    color: var(--white);
+}
+
+.sticky .nav-btn:hover{
+    color: var(--black);
+}
+
+.nav-btn::after {
+    transition: all .3s ease;
+    width: 0%;
+    height: 2px;
+    bottom: 0;
+    position: absolute;
+    content: '';
+    background-color: var(--black);
+    border-radius: 1rem;
+    left: 50%;
+    z-index: -1;
+}
+
+.sticky .nav-btn::after{
+    background-color: var(--white);
+}
+
+.nav-btn:hover::after {
+    width: 100%;
+    height: 100%;
+    left: 0;
+}
+
+/* menu bar*/
+.menu-btn {
+    height: 32px;
+    width: 40px;
+    cursor: pointer;
+    display: none;
+}
+
+.menu-btn span,
+.menu-btn span::before,
+.menu-btn span::after {
+    background: var(--black-2);
+    content: '';
+    position: absolute;
+    width: 40px;
+    height: 3px;
+    margin-top: 13px;
+    transition: .3s ease-in-out .3s;
+}
+
+.sticky .menu-btn span,
+.sticky .menu-btn span::before,
+.sticky .menu-btn span::after {
+    background: var(--white);
+}
+
+.menu-btn span::before {
+    margin-top: -12px;
+    transition: .3s ease-in-out;
+}
+
+.menu-btn span::after {
+    margin-top: 12px;
+    transition: .3s ease-in-out;
+}
+
+.menu-btn.active span {
+    background: transparent;
+    transition: .5s ease-in-out;
+    transform: rotate(-90deg);
+}
+
+.menu-btn.active span::before {
+    margin-top: 0;
+    transform: rotate(-45deg);
+    transition-delay: .5s;
+}
+
+.menu-btn.active span::after {
+    margin-top: 0;
+    transform: rotate(45deg);
+    transition-delay: .5s;
+}
+
+/* menu end */
+
+#hero-div {
+    height: 60%;
+    display: flex;
+    z-index: 10;
+}
+.hero-div-main{
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.hero-div-main h1{
+    font-size: 5vw;
+    color: var(--white);
+    font-family: 'Baumans';
+}
+#op {
+    height: 100vh;
+}
+
+@media screen and (max-width:1440px) {}
+
+@media screen and (max-width:1024px) {
+
+    .menu-btn {
+        display: block;
+    }
+
+    nav ul {
+        position: absolute;
+        top: 8rem;
+        left: 0;
+        width: 100%;
+        height: 0;
+        overflow: hidden;
+        background-color: var(--white);
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        transition: all .5s ease;
+    }
+    nav ul li{
+        margin: 2.5vh 0;
+        transition: all .7s ease;
+    }
+    nav ul li:nth-child(even) {
+        transform: translateX(-100px);
+    }
+    nav ul li:nth-child(odd) {
+        transform: translateX(100px);
+    }
+    nav ul li a{
+        font-size: 3vmax;
+        opacity: 0;
+    }
+    nav.active ul {
+        height: calc(100vh - 8rem);
+    }
+    nav.active ul li a{
+        opacity: 1;
+    }
+    nav.active ul li:nth-child(even) {
+        transform: translateX(0);
+    }
+    nav.active ul li:nth-child(odd) {
+        transform: translateX(0);
+    }
+
+}
+
+@media screen and (max-width:768px) {}
+
+@media screen and (max-width:425px) {}
+
+@media screen and (max-width:375px) {}
+
+@media screen and (max-width:320px) {}
