@@ -7,9 +7,7 @@
     text-decoration: none;
     font-family: 'Poppins';
 }
-::selection{
-    background-color: var(--midnight-blue);
-}
+
 
 html {
     scroll-behavior: smooth;
@@ -22,14 +20,40 @@ html {
     --black-2: #06000Aff;
     --dark-violet: #9102C0ff;
     --white: #ffff;
+    --grey: #666666;
 }
 
 html {
     font-size: 62.5%;
 }
 
+::selection {
+    background-color: var(--midnight-blue);
+}
+
 p {
     font-size: 1.6rem;
+}
+
+.p-h1 {
+    font-size: 5vmax;
+    color: var(--dark-violet);
+}
+
+.p-p {
+    color: var(--grey);
+    font-size: 18px;
+}
+
+.section-head {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    padding-right: 2rem;
+    gap: 2.5rem;
+    width: 100%;
+    margin-left: 10vw;
 }
 
 #hero {
@@ -236,14 +260,17 @@ nav ul li a {
     margin-left: 10vw;
     gap: 20px;
 }
-.hero-div-inner{
+
+.hero-div-inner {
     display: flex;
 }
+
 .hero-div-inner h3 {
     font-size: 3vw;
     color: var(--white);
 }
-.hero-div-inner span{
+
+.hero-div-inner span {
     width: 20px;
 }
 
@@ -258,19 +285,86 @@ nav ul li a {
     cursor: pointer;
     user-select: none;
 }
-.hero-div-main h1:hover{
+
+.hero-div-main h1:hover {
     color: var(--white);
 }
-.hero-div-main p{
+
+.hero-div-main p {
     font-size: 18px;
     color: var(--white);
     width: 50%;
     line-height: 35px;
 }
 
-#op {
-    height: 100vh;
+/* Courses */
+#courses {
+    padding: 6rem 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
+
+.courses-main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn-cm {
+    padding: 1.5rem 6rem;
+    color: var(--black);
+    border: 2px solid var(--dark-violet);
+    position: relative;
+    border-radius: 10px;
+    user-select: none;
+    font-weight: 700;
+    font-size: 2rem;
+    transition: all .3s ease;
+    box-shadow: 0px 1px 15px -4px rgba(31, 0, 45, 0.75);
+    -webkit-box-shadow: 0px 1px 15px -4px rgba(31, 0, 45, 0.75);
+    -moz-box-shadow: 0px 1px 15px -4px rgba(31, 0, 45, 0.75);
+    overflow: hidden;
+}
+
+.btn-cm::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0%;
+    height: 50%;
+    background: var(--dark-violet);
+    transition: all .3s ease;
+    border-radius: 0 0 7px 7px;
+    z-index: -1;
+}
+
+.btn-cm:hover::after {
+    width: 100%;
+}
+
+.btn-cm::before {
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 0%;
+    height: 50%;
+    background: var(--dark-violet);
+    transition: all .3s ease;
+    border-radius: 7px 7px 0 0;
+    z-index: -1;
+}
+
+.btn-cm:hover::before {
+    width: 100%;
+}
+
+.btn-cm:hover {
+    color: var(--white);
+}
+
 
 @media screen and (max-width:1440px) {}
 
@@ -304,14 +398,6 @@ nav ul li a {
         transition: all .7s ease;
     }
 
-    /* nav ul li:nth-child(even) {
-        transform: translateX(-100px);
-    }
-
-    nav ul li:nth-child(odd) {
-        transform: translateX(100px);
-    } */
-
     nav ul li a {
         font-size: 3vmax;
         /* opacity: 0; */
@@ -321,74 +407,84 @@ nav ul li a {
         height: calc(100vh - 8rem);
     }
 
-    /* nav.active ul li a {
-        opacity: 1;
-    } */
-/* 
-    nav.active ul li:nth-child(even) {
-        transform: translateX(0);
-    }
-
-    nav.active ul li:nth-child(odd) {
-        transform: translateX(0);
-    } */
-
-    .hero-div-main h1{
+    .hero-div-main h1 {
         font-size: 9vmax;
     }
-    .hero-div-main h3{
+
+    .hero-div-main h3 {
         font-size: 4vmax;
     }
-    .hero-div-main p{
+
+    .hero-div-main p {
         width: 80%;
+    }
+    .p-h1 {
+        font-size: 8vmin;
     }
 
 }
 
 @media screen and (max-width:768px) {
-    .hero-div-main h1{
+    .hero-div-main h1 {
         font-size: 10vw;
     }
-    .hero-div-main h3{
+
+    .hero-div-main h3 {
         font-size: 6vw;
     }
-    #navbar{
+
+    #navbar {
         padding: 0 20px 0 3.5vw;
     }
+
     .menu-btn {
         margin-top: 6px;
+    }
+
+    .p-h1 {
+        font-size: 10vmin;
     }
 }
 
 @media screen and (max-width:600px) {
-    .hero-div-main{
+    .hero-div-main {
         align-items: center;
         text-align: center;
         margin-left: 0;
     }
+
     .hero-div-inner {
         display: flex;
         align-items: center;
         justify-content: center;
         flex-direction: column;
     }
-    .hero-div-main p{
+
+    .hero-div-main p {
         width: auto;
     }
-    .hero-div-main{
+
+    .hero-div-main {
         padding: 0 5vw;
     }
 }
+
 @media screen and (max-width:425px) {
     .hero-div-main h1 {
         font-size: 13vw;
     }
+
     .hero-div-main h3 {
         font-size: 8vw;
     }
+
     .hero-div-main p {
         font-size: 16px;
         line-height: 30px;
+    }
+
+    .p-p {
+        font-size: 16px;
     }
 }
 
