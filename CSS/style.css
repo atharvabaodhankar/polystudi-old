@@ -52,8 +52,9 @@ p {
     flex-direction: column;
     padding-right: 2rem;
     gap: 2.5rem;
-    width: 100%;
+    width: calc(100% - 10vw);
     margin-left: 10vw;
+    margin-bottom: 5rem;
 }
 
 #hero {
@@ -303,6 +304,8 @@ nav ul li a {
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-direction: column;
+    overflow-x: hidden;
 }
 
 .courses-main {
@@ -365,6 +368,159 @@ nav ul li a {
     color: var(--white);
 }
 
+.courses-main{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin-bottom: 3rem;
+}
+.course-box{
+    margin: 0 2rem;
+}
+
+.course-box ul{
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    gap: 6rem;
+}
+.course-box ul h1{
+    font-size: 3rem;
+}
+
+/* About us */
+#aboutus{
+    padding: 6rem 0;
+}
+.aboutus-main{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.aboutus-box {
+    margin: 0 2rem;
+}
+
+.about-card {
+    padding: 30px 0 40px;
+    margin-bottom: 30px;
+    background-color: #f7f5ec;
+    text-align: center;
+    overflow: hidden;
+    position: relative;
+    width: 300px;
+    margin: 2rem 2rem;
+    border-radius: 10px;
+    cursor: pointer;
+    user-select: none;
+}
+
+.about-card .a-c-picture {
+    display: inline-block;
+    height: 130px;
+    width: 130px;
+    margin-bottom: 50px;
+    z-index: 1;
+    position: relative;
+}
+
+.about-card .a-c-picture::before {
+    content: "";
+    width: 100%;
+    height: 0;
+    border-radius: 50%;
+    background-color: var(--dark-violet);
+    position: absolute;
+    bottom: 135%;
+    right: 0;
+    left: 0;
+    opacity: 0.9;
+    transform: scale(3);
+    transition: all 0.3s linear 0s;
+}
+
+.about-card:hover .a-c-picture::before {
+    height: 100%;
+}
+
+.about-card .a-c-picture::after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background-color: var(--midnight-blue);
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+.about-card .a-c-picture img {
+    width: 100%;
+    height: auto;
+    border-radius: 50%;
+    transform: scale(1);
+    transition: all 0.9s ease 0s;
+}
+
+.about-card:hover .a-c-picture img {
+    box-shadow: 0 0 0 14px #f7f5ec;
+    transform: scale(0.7);
+}
+
+.about-card .title {
+    display: block;
+    font-size: 15px;
+    color: #4e5052;
+    text-transform: capitalize;
+}
+
+.about-card .social {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    background-color: var(--dark-violet);
+    position: absolute;
+    bottom: -100px;
+    left: 0;
+    transition: all 0.5s ease 0s;
+}
+
+.about-card:hover .social {
+    bottom: 0;
+}
+
+.about-card .social li {
+    display: inline-block;
+}
+
+.about-card .social li a {
+    display: block;
+    padding: 10px;
+    font-size: 30px;
+    color: white;
+    transition: all 0.3s ease 0s;
+    text-decoration: none;
+    margin: 0 1rem;
+}
+
+.about-card .social li a:hover {
+    color: var(--midnight-blue);
+    background-color: #f7f5ec;
+}
+.about-card-content h3{
+    font-size: 2.4rem;
+}
+.about-card-content h4{
+    font-size: 1.8rem;
+    color: var(--grey);
+    margin-top: 1rem;
+    margin-bottom: 3rem;
+}
 
 @media screen and (max-width:1440px) {}
 
@@ -444,6 +600,20 @@ nav ul li a {
     .p-h1 {
         font-size: 10vmin;
     }
+    .about-card .a-c-picture::before {
+        height: 100%;
+    }
+    .about-card .a-c-picture img {
+        box-shadow: 0 0 0 14px #f7f5ec;
+        transform: scale(0.7);
+    }
+    .about-card .a-c-picture img {
+        box-shadow: 0 0 0 14px #f7f5ec;
+        transform: scale(0.7);
+    }
+    .about-card .social {
+        bottom: 0;
+    }
 }
 
 @media screen and (max-width:600px) {
@@ -467,6 +637,13 @@ nav ul li a {
     .hero-div-main {
         padding: 0 5vw;
     }
+    .courses-main{
+        flex-direction: column;
+        margin-top: 0;
+    }
+    .courses-main ul{
+        margin-top: 4rem;
+    }
 }
 
 @media screen and (max-width:425px) {
@@ -485,6 +662,9 @@ nav ul li a {
 
     .p-p {
         font-size: 16px;
+    }
+    .course-box ul h1{
+        font-size: 2.6rem;
     }
 }
 

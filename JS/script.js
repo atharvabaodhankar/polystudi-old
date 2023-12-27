@@ -69,6 +69,68 @@ gsap.from(".magnet", {
   delay: 0.4,
 });
 
+// Courses GSAP
+
+gsap.from(".ch-h1", {
+  x: 300,
+  duration: 1.2,
+  opacity: 0,
+  scrollTrigger: {
+    trigger: ".ch-h1",
+    scroller: "body",
+    start: "top 40%",
+  },
+});
+gsap.from(".course-box ul li", {
+  x: 300,
+  duration: 1.2,
+  opacity: 0,
+  // delay:.5,
+  stagger: .4,
+  scrollTrigger: {
+    trigger: ".course-box ul li",
+    scroller: "body",
+    start:"top 40%"
+  },
+});
+gsap.from(".course-box ul h1", {
+  y: -50,
+  duration: 1.2,
+  opacity: 0,
+  delay:.2,
+  stagger: .4,
+  scrollTrigger: {
+    trigger: ".course-box ul h1",
+    scroller: "body",
+    start: "top 30%",
+  },
+});
+
+// About Us GSAP
+
+gsap.from(".au-h1", {
+  x: 100,
+  duration: 1.2,
+  opacity: 0,
+  scrollTrigger: {
+    trigger: ".au-h1",
+ 
+    scroller: "body",
+    start:"top 40%"
+  },
+});
+gsap.from(".aboutus-box", {
+  y: -200,
+  scale:0,
+  duration: 1.2,
+  opacity: 0,
+  scrollTrigger: {
+    trigger: ".aboutus-box",
+    scroller: "body",
+    start: "top 55%"
+  },
+});
+
 let MenuAnimateFix = gsap.matchMedia();
 
 MenuAnimateFix.add("(max-width: 500px)", () => {
