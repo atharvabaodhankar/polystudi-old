@@ -1,3 +1,10 @@
+var loader = document.querySelector(".loader-wrapper");
+
+      window.addEventListener("load", function () {
+        loader.style.opacity = 0;
+        loader.style.visibility = "hidden";
+});
+
 // Scroll Navbar
 
 window.addEventListener("scroll", () => {
@@ -37,15 +44,16 @@ Shery.makeMagnet(".magnet");
 // Hero page GSAP
 
 var heroAnimate = gsap.timeline();
-
-Shery.textAnimate(".hero-h1", {
-  style: 2,
-  y: 10,
-  delay: 1,
-  duration: 2,
-  ease: "cubic-bezier(0.13, 1, 0.320, 1)",
-  multiplier: 0.1,
-});
+setTimeout(function () {
+  Shery.textAnimate(".hero-h1", {
+    style: 2,
+    y: 10,
+    delay: 2,
+    duration: 2,
+    ease: "cubic-bezier(0.13, 1, 0.320, 1)",
+    multiplier: 0.1,
+  });
+}, 1200);
 
 heroAnimate.from(".hero-div-main h3", {
   x: -100,
@@ -61,12 +69,12 @@ heroAnimate.from(".hero-div-main p", {
   stagger: 2,
 });
 
-gsap.from(".magnet", {
+gsap.from(".heroShow-divs", {
   y: -100,
   opacity: 0,
   stagger: 0.2,
   duration: 1,
-  delay: 0.4,
+  delay: 1.4,
 });
 
 // Courses GSAP
@@ -85,21 +93,21 @@ gsap.from(".course-box ul li", {
   x: 300,
   duration: 1.2,
   opacity: 0,
-  delay:.5,
-  stagger: .4,
+  delay: 0.5,
+  stagger: 0.4,
   ease: "expo.out",
   scrollTrigger: {
     trigger: ".course-box ul li",
     scroller: "body",
-    start:"top 55%"
+    start: "top 55%",
   },
 });
 gsap.from(".course-box ul h1", {
   y: -50,
   duration: 1.2,
   opacity: 0,
-  delay:.2,
-  stagger: .4,
+  delay: 0.2,
+  stagger: 0.4,
   scrollTrigger: {
     trigger: ".course-box ul h1",
     scroller: "body",
@@ -115,14 +123,14 @@ gsap.from(".au-h1", {
   opacity: 0,
   scrollTrigger: {
     trigger: ".au-h1",
- 
+
     scroller: "body",
-    start:"top 40%"
+    start: "top 40%",
   },
 });
 gsap.from(".aboutus-box", {
   y: -200,
-  scale:0,
+  scale: 0,
   duration: 1.2,
   opacity: 0,
   scrollTrigger: {
@@ -130,8 +138,8 @@ gsap.from(".aboutus-box", {
     scroller: "body",
     // markers:"true",
     start: "top 65%",
-    end:"bottom 40%",
-    scrub:2
+    end: "bottom 40%",
+    scrub: 2,
   },
 });
 
@@ -144,40 +152,39 @@ gsap.from(".cu-h1", {
   scrollTrigger: {
     trigger: ".cu-h1",
     scroller: "body",
-    start:"top 30%"
-  }
-})
+    start: "top 30%",
+  },
+});
 gsap.from(".contact-form", {
   y: 100,
   opacity: 0,
   rotate: 10,
-  delay:.7,
+  delay: 0.7,
   duration: 1.2,
   scrollTrigger: {
     trigger: ".contact-form",
     scroller: "body",
     // markers: "true",
-    start:"top 45%"
-  }
-})
+    start: "top 45%",
+  },
+});
 
 // Footer GSAP
 
 gsap.from(".footer-animate", {
   y: 100,
   opacity: 0,
-  delay:.7,
+  delay: 0.7,
   duration: 1.2,
   scrollTrigger: {
     trigger: ".footer-animate",
     scroller: "body",
     // markers:"true",
-    start:"top 80%"
+    start: "top 80%",
   },
-  stagger: .5,
-  ease: "expo.out"
-})
-
+  stagger: 0.5,
+  ease: "expo.out",
+});
 
 let MenuAnimateFix = gsap.matchMedia();
 
@@ -191,4 +198,5 @@ gsap.from(".nav-ul li", {
   y: -100,
   stagger: 0.2,
   duration: 0.7,
+  delay: 1.8,
 });

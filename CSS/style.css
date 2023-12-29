@@ -710,6 +710,25 @@ nav ul li a {
     font-size: 2rem;
  }
 
+ /* Loader */
+
+ .loader-wrapper{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: #FFFFFF;
+    top: 0;
+    left: 0;
+    transition: all .5s ease;
+    z-index: 100;
+}
+.loader-wrapper img{
+    width: 25vmax;
+}
+
 @media screen and (max-width:1440px) {}
 
 @media screen and (max-width:1024px) {
