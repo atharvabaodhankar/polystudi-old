@@ -535,6 +535,7 @@ nav ul li a {
     justify-content: center;
     flex-direction: column;
     height: 100vh;
+    overflow: hidden;
 }
 
 .contact-main {
@@ -670,6 +671,7 @@ nav ul li a {
     padding: 2.5rem 4rem;
     background-color: var(--midnight-blue);
     margin-top: 4rem;
+    overflow: hidden;
 }
 .footer-rights p a {
     color: var(--white);

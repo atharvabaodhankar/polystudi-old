@@ -85,12 +85,13 @@ gsap.from(".course-box ul li", {
   x: 300,
   duration: 1.2,
   opacity: 0,
-  // delay:.5,
+  delay:.5,
   stagger: .4,
+  ease: "expo.out",
   scrollTrigger: {
     trigger: ".course-box ul li",
     scroller: "body",
-    start:"top 40%"
+    start:"top 55%"
   },
 });
 gsap.from(".course-box ul h1", {
@@ -102,7 +103,7 @@ gsap.from(".course-box ul h1", {
   scrollTrigger: {
     trigger: ".course-box ul h1",
     scroller: "body",
-    start: "top 30%",
+    start: "top 50%",
   },
 });
 
@@ -127,9 +128,56 @@ gsap.from(".aboutus-box", {
   scrollTrigger: {
     trigger: ".aboutus-box",
     scroller: "body",
-    start: "top 55%"
+    // markers:"true",
+    start: "top 65%",
+    end:"bottom 40%",
+    scrub:2
   },
 });
+
+// Contact Us GSAP
+
+gsap.from(".cu-h1", {
+  x: 100,
+  opacity: 0,
+  duration: 1.2,
+  scrollTrigger: {
+    trigger: ".cu-h1",
+    scroller: "body",
+    start:"top 30%"
+  }
+})
+gsap.from(".contact-form", {
+  y: 100,
+  opacity: 0,
+  rotate: 10,
+  delay:.7,
+  duration: 1.2,
+  scrollTrigger: {
+    trigger: ".contact-form",
+    scroller: "body",
+    // markers: "true",
+    start:"top 45%"
+  }
+})
+
+// Footer GSAP
+
+gsap.from(".footer-animate", {
+  y: 100,
+  opacity: 0,
+  delay:.7,
+  duration: 1.2,
+  scrollTrigger: {
+    trigger: ".footer-animate",
+    scroller: "body",
+    // markers:"true",
+    start:"top 80%"
+  },
+  stagger: .5,
+  ease: "expo.out"
+})
+
 
 let MenuAnimateFix = gsap.matchMedia();
 
