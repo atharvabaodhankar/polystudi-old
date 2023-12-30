@@ -29,6 +29,7 @@ html {
 
 ::selection {
     background-color: var(--midnight-blue);
+    color: var(--white);
 }
 
 p {
@@ -913,7 +914,7 @@ nav ul li a {
     flex-direction: column;
     /* width: 290px; */
     border-radius: 1rem;
-    border: 2px solid #000;
+    border: 2px solid var(--dark-violet);
     overflow: hidden;
     background-color: #ffff;
 }
