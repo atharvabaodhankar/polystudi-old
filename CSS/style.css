@@ -1076,6 +1076,7 @@ nav ul li a {
 .notes-box .cu-btn:hover::after{
     height: 100%;
 }
+
 @media screen and (max-width:1270px) {
     nav ul {
         position: absolute;
