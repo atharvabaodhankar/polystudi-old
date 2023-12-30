@@ -896,6 +896,95 @@ nav ul li a {
 .manual-btn span.m-btn-h {
     color: #fff;
 }
+.slide-container {
+    width: 90%;
+    padding: 40px 0;
+}
+
+.slide-content {
+    margin: 0 4rem;
+    padding: 4.5rem 2rem;
+}
+
+.card {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    /* width: 290px; */
+    border-radius: 1rem;
+    border: 2px solid #000;
+    overflow: hidden;
+    background-color: #ffff;
+}
+
+.card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.card-image {
+    width: 100%;
+    height:400px;
+}
+
+.card-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 2rem 1rem;
+    /* height: 170px; */
+    text-align: center;
+}
+
+.card-content h1 {
+    font-size: 1.9rem;
+    height: 100px;
+}
+
+.card-content button {
+    padding: 2rem 1.5rem;
+    border-radius: 1rem;
+    margin-top: 2rem;
+    transition: all .3s ease;
+}
+
+.card-content button:hover {
+    background-color: var(--grey);
+}
+
+.swiper-navBtn {
+    color: var(--dark-violet) !important;
+    transition: color .3s ease;
+}
+
+.swiper-navBtn:hover {
+    color: var(--midnight-blue);
+}
+
+.swiper-navBtn::before,
+.swiper-navBtn::after {
+    font-size: 40px;
+}
+
+.swiper-pagination-bullet {
+    background-color: var(--midnight-blue) !important;
+    opacity: 1;
+}
+
+.swiper-pagination-bullet-active {
+    background-color: var(--dark-violet) !important;
+}
+
+.swiper-button-next {
+    right: 5px !important;
+}
+
+.swiper-button-prev {
+    left: 5px !important;
+}
 
 
 @media screen and (max-width:1270px) {
@@ -1035,6 +1124,13 @@ nav ul li a {
         width: 100%;
         overflow-x: scroll;
     }
+    .slide-container {
+        width: 100%;
+    }
+    
+    .slide-content {
+        padding: 4.5rem 0rem;
+    }
 }
 
 @media screen and (max-width:600px) {
@@ -1106,4 +1202,8 @@ nav ul li a {
 
 @media screen and (max-width:375px) {}
 
-@media screen and (max-width:320px) {}
+@media screen and (max-width:320px) {
+    .card-content h1 {
+        height: 130px;
+    }
+}
