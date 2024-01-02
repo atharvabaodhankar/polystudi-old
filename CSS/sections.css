@@ -110,6 +110,9 @@
 .assignments-box:hover{
     background-position:right ;
 }
+.manual-btn:hover {
+    background-color: var(--midnight-blue);
+}
 
 @media screen and (max-width:768px) {
     .assignments-box{
