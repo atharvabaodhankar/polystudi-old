@@ -73,9 +73,9 @@
         <div class="course-box">
           <ul>
             <h1>Computer Technology</h1>
-            <li><a href="CM2K/cm2k.html" class="btn-cm">CM 2 K</a></li>
+            <li><a href="CM2K/" class="btn-cm">CM 2 K</a></li>
             <li><a href="#" class="btn-cm">CM 3 I</a></li>
-            <li><a href="CM4I/cm4i.html" class="btn-cm">CM 4 I</a></li>
+            <li><a href="CM4I/" class="btn-cm">CM 4 I</a></li>
           </ul>
         </div>
       </div>
