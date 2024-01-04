@@ -43,39 +43,39 @@ Shery.makeMagnet(".magnet");
 
 // Hero page GSAP
 
-var heroAnimate = gsap.timeline();
-setTimeout(function () {
-  Shery.textAnimate(".hero-h1", {
-    style: 2,
-    y: 10,
-    delay: 2,
-    duration: 2,
-    ease: "cubic-bezier(0.13, 1, 0.320, 1)",
-    multiplier: 0.1,
-  });
-}, 1200);
+// var heroAnimate = gsap.timeline();
+// setTimeout(function () {
+//   Shery.textAnimate(".hero-h1", {
+//     style: 2,
+//     y: 10,
+//     delay: 2,
+//     duration: 2,
+//     ease: "cubic-bezier(0.13, 1, 0.320, 1)",
+//     multiplier: 0.1,
+//   });
+// }, 1200);
 
-heroAnimate.from(".hero-div-main h3", {
-  x: -100,
-  delay: 0.4,
-  duration: 1.3,
-  opacity: 0,
-  stagger: 2,
-});
-heroAnimate.from(".hero-div-main p", {
-  y: 100,
-  duration: 1.4,
-  opacity: 0,
-  stagger: 2,
-});
+// heroAnimate.from(".hero-div-main h3", {
+//   x: -100,
+//   delay: 0.4,
+//   duration: 1.3,
+//   opacity: 0,
+//   stagger: 2,
+// });
+// heroAnimate.from(".hero-div-main p", {
+//   y: 100,
+//   duration: 1.4,
+//   opacity: 0,
+//   stagger: 2,
+// });
 
-gsap.from(".heroShow-divs", {
-  y: -100,
-  opacity: 0,
-  stagger: 0.2,
-  duration: 1,
-  delay: 1.4,
-});
+// gsap.from(".heroShow-divs", {
+//   y: -100,
+//   opacity: 0,
+//   stagger: 0.2,
+//   duration: 1,
+//   delay: 1.4,
+// });
 
 // Courses GSAP
 
@@ -186,20 +186,20 @@ gsap.from(".footer-animate", {
   ease: "expo.out",
 });
 
-let MenuAnimateFix = gsap.matchMedia();
+// let MenuAnimateFix = gsap.matchMedia();
 
-MenuAnimateFix.add("(max-width: 500px)", () => {
-  gsap.to(".nav-ul li", {
-    none,
-  });
-});
+// MenuAnimateFix.add("(max-width: 500px)", () => {
+//   gsap.to(".nav-ul li", {
+//     none,
+//   });
+// });
 
-gsap.from(".nav-ul li", {
-  y: -100,
-  stagger: 0.2,
-  duration: 0.7,
-  delay: 1.8,
-});
+// gsap.from(".nav-ul li", {
+//   y: -100,
+//   stagger: 0.2,
+//   duration: 0.7,
+//   delay: 1.8,
+// });
 
 // Swiper JS
 
